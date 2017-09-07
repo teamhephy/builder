@@ -64,7 +64,7 @@ imports:
   - time
 - name: github.com/docker/distribution
   version: 0afef00d5764404d70f86076f364551657d51de6
-  repo: https://github.com/deis/distribution
+  repo: https://github.com/deisthree/distribution
   vcs: git
   subpackages:
   - context

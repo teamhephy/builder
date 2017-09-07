@@ -90,7 +90,7 @@ func dockerBuilderPod(
 	addEnvToPod(pod, "IMG_NAME", imageName)
 	addEnvToPod(pod, builderStorage, storageType)
 	// inject existing DEIS_REGISTRY_SERVICE_HOST and PORT info to dockerbuilder
-	// see https://github.com/deis/dockerbuilder/issues/83
+	// see https://github.com/deisthree/dockerbuilder/issues/83
 	addEnvToPod(pod, "DEIS_REGISTRY_SERVICE_HOST", registryHost)
 	addEnvToPod(pod, "DEIS_REGISTRY_SERVICE_PORT", registryPort)
 
