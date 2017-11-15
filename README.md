@@ -1,12 +1,14 @@
 
-# Deis Builder v2
+# Hephy Builder v2
 
 [![Build Status](https://ci.deis.io/job/builder/badge/icon)](https://ci.deis.io/job/builder) [![codecov](https://codecov.io/gh/deis/builder/branch/master/graph/badge.svg)](https://codecov.io/gh/deis/builder)
 [![Go Report Card](https://goreportcard.com/badge/github.com/deis/builder)](https://goreportcard.com/report/github.com/deis/builder)[![codebeat badge](https://codebeat.co/badges/e29e5e2b-531d-4374-810b-f05053c47688)](https://codebeat.co/projects/github-com-deis-builder) [![Docker Repository on Quay](https://quay.io/repository/deisci/builder/status "Docker Repository on Quay")](https://quay.io/repository/deisci/builder)
 
+Hephy - A Fork of Deis Workflow
+
 Deis (pronounced DAY-iss) Workflow is an open source Platform as a Service (PaaS) that adds a developer-friendly layer to any [Kubernetes][k8s-home] cluster, making it easy to deploy and manage applications on your own servers.
 
-For more information about Deis Workflow, please visit the main project page at https://github.com/deisthree/workflow.
+For more information about Deis Workflow, please visit the main project page at https://github.com/teamhephy/workflow.
 
 We welcome your input! If you have feedback, please [submit an issue][issues]. If you'd like to participate in development, please read the "Development" section below and [submit a pull request][prs].
 
@@ -19,8 +21,8 @@ The builder is primarily a git server that responds to `git push`es by executing
 	- If the `BUILDER_STORAGE` environment variable is other than `minio`, attempts to create the appropriate storage driver and saves using this driver.
   - Otherwise, if `BUILDER_STORAGE` is `minio` and the `DEIS_MINIO_SERVICE_HOST` and `DEIS_MINIO_SERVICE_PORT` environment variables exist (these are standard [Kubernetes service discovery environment variables](http://kubernetes.io/docs/user-guide/services/#environment-variables)), saves to the [S3 API][s3-api-ref] compatible server at `http://$DEIS_MINIO_SERVICE_HOST:$DEIS_MINIO_SERVICE_HOST`
 3. Starts a new [Kubernetes Pod](http://kubernetes.io/docs/user-guide/pods/) to build the code, according to the following rules:
-  - If a `Dockerfile` is present in the codebase, starts a [`dockerbuilder`](https://github.com/deisthree/dockerbuilder) pod, configured to download the code to build from the URL computed in the previous step.
-  - Otherwise, starts a [`slugbuilder`](https://github.com/deisthree/slugbuilder) pod, configured to download the code to build from the URL computed in the previous step.
+  - If a `Dockerfile` is present in the codebase, starts a [`dockerbuilder`](https://github.com/teamhephy/dockerbuilder) pod, configured to download the code to build from the URL computed in the previous step.
+  - Otherwise, starts a [`slugbuilder`](https://github.com/teamhephy/slugbuilder) pod, configured to download the code to build from the URL computed in the previous step.
 
 # Supported Off-Cluster Storage Backends
 
@@ -43,7 +45,7 @@ The Deis project welcomes contributions from all developers. The high level proc
 
 ## Docker Based Development Environment
 
-The preferred environment for development uses [the `go-dev` Docker image](https://github.com/deisthree/docker-go-dev). The tools described in this section are used to build, test, package and release each version of Deis.
+The preferred environment for development uses [the `go-dev` Docker image](https://github.com/teamhephy/docker-go-dev). The tools described in this section are used to build, test, package and release each version of Deis.
 
 To use it yourself, you must have [make](https://www.gnu.org/software/make/) installed and Docker installed and running on your local development machine.
 
@@ -63,11 +65,11 @@ Note that you will not be able to build or push Docker images using this method 
 
 The Deis project requires that as much code as possible is unit tested, but the core contributors also recognize that some code must be tested at a higher level (functional or integration tests, for example).
 
-The [end-to-end tests](https://github.com/deisthree/workflow-e2e) repository has our integration tests. Additionally, the core contributors and members of the community also regularly [dogfood](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) the platform. Since this particular component is at the center of much of the Deis Workflow platform, we find it especially important to dogfood it.
+The [end-to-end tests](https://github.com/teamhephy/workflow-e2e) repository has our integration tests. Additionally, the core contributors and members of the community also regularly [dogfood](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) the platform. Since this particular component is at the center of much of the Deis Workflow platform, we find it especially important to dogfood it.
 
 ## Running End-to-End Tests
 
-Please see [README.md](https://github.com/deisthree/workflow-e2e/blob/master/README.md) on the end-to-end tests repository for instructions on how to set up your testing environment and run the tests.
+Please see [README.md](https://github.com/teamhephy/workflow-e2e/blob/master/README.md) on the end-to-end tests repository for instructions on how to set up your testing environment and run the tests.
 
 ## Dogfooding
 
@@ -77,6 +79,6 @@ Please follow the instructions on the [official Deis docs](http://docs-v2.readth
 [s3-api-ref]: http://docs.aws.amazon.com/AmazonS3/latest/API/APIRest.html
 [install-k8s]: http://kubernetes.io/gettingstarted/
 [k8s-home]: http://kubernetes.io
-[issues]: https://github.com/deisthree/builder/issues
-[prs]: https://github.com/deisthree/builder/pulls
-[v2.18]: https://github.com/deisthree/workflow/releases/tag/v2.18.0
+[issues]: https://github.com/teamhephy/builder/issues
+[prs]: https://github.com/teamhephy/builder/pulls
+[v2.18]: https://github.com/teamhephy/workflow/releases/tag/v2.18.0

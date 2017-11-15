@@ -4,5 +4,5 @@ refs deis/workflow#1234
 refs deis/workflow-e2e#5678
 
 
-[docs]: https://github.com/deisthree/workflow
-[e2e]: https://github.com/deisthree/workflow-e2e
+[docs]: https://github.com/teamhephy/workflow
+[e2e]: https://github.com/teamhephy/workflow-e2e
