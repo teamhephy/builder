@@ -1,4 +1,4 @@
-package: github.com/deis/builder
+package: github.com/teamhephy/builder
 ignore:
 - appengine
 - appengine/memcache
@@ -15,7 +15,7 @@ import:
 - package: gopkg.in/yaml.v2
   version: eca94c41d994ae2215d455ce578ae6e2dc6ee516
 - package: github.com/pborman/uuid
-- package: github.com/deis/pkg
+- package: github.com/teamhephy/pkg
   version: 00e55bded444eea7fadff398f93152e962a0c338
   subpackages:
   - time
@@ -41,5 +41,5 @@ import:
   version: 8e7dc108ab3a1ab6ce6d922bbaff5657b88e8e49
   repo: https://github.com/spf13/pflag
   vcs: git
-- package: github.com/deis/controller-sdk-go
+- package: github.com/teamhephy/controller-sdk-go
   version: 27bab7c5535de202635877fa7600d5158b91a757

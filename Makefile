@@ -56,6 +56,6 @@ check-kubectl:
 	fi
 
 deploy: check-kubectl docker-build docker-push
-	kubectl --namespace=deis patch deployment deis-$(SHORT_NAME) --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/image", "value":"$(IMAGE)"}]'
+	kubectl --namespace=hephy patch deployment hephy-$(SHORT_NAME) --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/containers/0/image", "value":"$(IMAGE)"}]'
 
 .PHONY: bootstrap glideup build docker-build test test-style test-unit test-cover deploy
