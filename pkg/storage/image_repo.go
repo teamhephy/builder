@@ -19,6 +19,7 @@ func CreateImageRepo(reponame string, params map[string]string) error {
 		accessKey  string
 		secretKey  string
 		regionName string
+		endpoint   string
 		ok         bool
 	)
 
@@ -35,6 +36,10 @@ func CreateImageRepo(reponame string, params map[string]string) error {
 		return fmt.Errorf("No region parameter provided")
 	}
 	region := fmt.Sprint(regionName)
+	endpoint, ok = params["endpoint"]
+	if !ok {
+		endpoint = ""
+	}
 	creds := credentials.NewChainCredentials([]credentials.Provider{
 		&credentials.StaticProvider{
 			Value: credentials.Value{
@@ -49,6 +54,7 @@ func CreateImageRepo(reponame string, params map[string]string) error {
 	awsConfig := aws.NewConfig()
 	awsConfig.WithCredentials(creds)
 	awsConfig.WithRegion(region)
+	awsConfig.WithEndpoint(endpoint)
 	svc := ecr.New(session.New(awsConfig))
 
 	repoInput := &ecr.CreateRepositoryInput{

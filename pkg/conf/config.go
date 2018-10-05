@@ -56,6 +56,7 @@ func GetStorageParams(env sys.Env) (Parameters, error) {
 	}
 	params["bucket"] = params["builder-bucket"]
 	params["container"] = params["builder-container"]
+	params["regionendpoint"] = params["endpoint"]
 	if env.Get("BUILDER_STORAGE") == "minio" {
 		mHost := env.Get(minioHostEnvVar)
 		mPort := env.Get(minioPortEnvVar)
