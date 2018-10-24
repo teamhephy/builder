@@ -23,13 +23,27 @@ import:
 - package: github.com/codegangsta/cli
   version: a65b733b303f0055f8d324d805f393cd3e7a7904
 - package: k8s.io/kubernetes
+  repo: https://github.com/kubernetes/kubernetes
   version: 1.2.4
+  vcs: git
 - package: github.com/arschles/assert
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
 - package: github.com/docker/distribution
   repo: https://github.com/teamhephy/distribution
-  version: 0afef00d5764404d70f86076f364551657d51de6
+  version: 5a101320cc27f191cef9b608f344a76d9f6b10f8
   vcs: git
+- package: github.com/aws/aws-sdk-go/aws/endpoints
+  version: f831d5a0822a1ad72420ab18c6269bca1ddaf490
+  repo: https://github.com/aws/aws-sdk-go
+  vcs: git
+- package: github.com/prometheus/client_golang
+  version: c332b6f63c0658a65eca15c0e5247ded801cf564
+- package: github.com/prometheus/client_model
+  version: 99fa1f4be8e564e8a6b613da7fa6f46c9edafc6c
+- package: github.com/prometheus/common
+  version: 89604d197083d4781071d3c65855d24ecfb0a563
+- package: github.com/prometheus/procfs
+  version: cb4147076ac75738c9a7d279075a253c0cc5acbd
 - package: speter.net/go/exp/math/dec/inf
   repo: https://github.com/belua/inf
   vcs: git
