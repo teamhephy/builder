@@ -150,7 +150,7 @@ func createRepo(repoPath string) (bool, error) {
 
 		return true, nil
 	} else if err == nil {
-		return false, errors.New("Expected directory, found file.")
+		return false, errors.New("expected directory, found file")
 	}
 	return false, err
 }

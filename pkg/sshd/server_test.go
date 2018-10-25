@@ -22,7 +22,7 @@ func TestGitPktLine(t *testing.T) {
 	err := gitPktLine(b, str)
 	assert.NoErr(t, err)
 
-	outStr := string(b.Bytes())
+	outStr := b.String()
 	assert.True(t, len(outStr) > 4, "output string <= 4 chars")
 	assert.Equal(t, outStr[:4], fmt.Sprintf("%04x", len(str)+4), "hex prefix")
 	assert.Equal(t, outStr[4:], str, "remainder of string")
@@ -279,7 +279,7 @@ func gitPktLineStr(str string) (string, error) {
 	if err := gitPktLine(&buf, str); err != nil {
 		return "", err
 	}
-	return string(buf.Bytes()), nil
+	return buf.String(), nil
 }
 
 // connMetadata mocks ssh.ConnMetadata for authentication.

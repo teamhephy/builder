@@ -1,12 +1,12 @@
 package storage
 
 import (
+	"context"
 	"errors"
 	"testing"
 	"time"
 
 	"github.com/arschles/assert"
-	"github.com/docker/distribution/context"
 	storagedriver "github.com/docker/distribution/registry/storage/driver"
 )
 
@@ -15,7 +15,9 @@ const (
 )
 
 func TestObjectExistsSuccess(t *testing.T) {
-	objInfo := storagedriver.FileInfoInternal{storagedriver.FileInfoFields{Path: objPath, Size: 1234}}
+	objInfo := storagedriver.FileInfoInternal{
+		FileInfoFields: storagedriver.FileInfoFields{Path: objPath, Size: 1234},
+	}
 	statter := &FakeObjectStatter{
 		Fn: func(context.Context, string) (storagedriver.FileInfo, error) {
 			return objInfo, nil

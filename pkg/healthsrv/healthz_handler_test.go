@@ -2,6 +2,7 @@ package healthsrv
 
 import (
 	"bytes"
+	"context"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -11,8 +12,6 @@ import (
 	"testing"
 
 	"k8s.io/kubernetes/pkg/api"
-
-	"github.com/docker/distribution/context"
 
 	"github.com/arschles/assert"
 	"github.com/deis/builder/pkg/sshd"

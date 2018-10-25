@@ -326,10 +326,8 @@ func createAppEnvConfigSecret(secretsClient client.SecretsInterface, secretName 
 	}
 	if _, err := secretsClient.Create(newSecret); err != nil {
 		if apierrors.IsAlreadyExists(err) {
-			if _, err = secretsClient.Update(newSecret); err != nil {
-				return err
-			}
-			return nil
+			_, err = secretsClient.Update(newSecret)
+			return err
 		}
 		return err
 	}

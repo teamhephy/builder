@@ -30,8 +30,8 @@ const (
 )
 
 var errBuildAppPerm = errors.New("user has no permission to build the app")
-var errDirPerm = errors.New("Cannot change directory in file name.")
-var errDirCreatePerm = errors.New("Empty repo name.")
+var errDirPerm = errors.New("cannot change directory in file name")
+var errDirCreatePerm = errors.New("empty repo name")
 
 // AuthKey authenticates based on a public key.
 func AuthKey(key ssh.PublicKey, cnf *Config) (*ssh.Permissions, error) {

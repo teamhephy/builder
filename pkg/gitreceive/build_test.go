@@ -2,6 +2,7 @@ package gitreceive
 
 import (
 	"bytes"
+	"context"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -16,7 +17,6 @@ import (
 	"github.com/deis/builder/pkg/sys"
 	"github.com/deis/controller-sdk-go/api"
 	"github.com/deis/pkg/log"
-	"github.com/docker/distribution/context"
 	"github.com/docker/distribution/registry/storage/driver/factory"
 	_ "github.com/docker/distribution/registry/storage/driver/inmemory"
 	"gopkg.in/yaml.v2"
