@@ -37,7 +37,7 @@ build:
 test: test-style test-unit
 
 test-style:
-	${DEV_ENV_CMD} lint
+	${DEV_ENV_CMD} sh -c 'sed -i "s/--deadline=20s/--deadline=600s/" `which lint`; lint'
 
 test-unit:
 	${DEV_ENV_CMD} sh -c '${GOTEST} $$(glide nv)'
