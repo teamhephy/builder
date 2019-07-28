@@ -28,7 +28,7 @@ import:
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
 - package: github.com/docker/distribution
   repo: https://github.com/teamhephy/distribution
-  version: 5a101320cc27f191cef9b608f344a76d9f6b10f8
+  version: 0afef00d5764404d70f86076f364551657d51de6
   vcs: git
 - package: speter.net/go/exp/math/dec/inf
   repo: https://github.com/belua/inf
