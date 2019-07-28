@@ -14,7 +14,7 @@ import (
 func TestCreatePreReceiveHook(t *testing.T) {
 	const gitHome = "TestGitHome"
 	gopath := os.Getenv("GOPATH")
-	repoPath := filepath.Join(gopath, "src", "github.com", "deis", "builder", "testdata")
+	repoPath := filepath.Join(gopath, "src", "github.com", "teamhephy", "builder", "testdata")
 	assert.NoErr(t, createPreReceiveHook(gitHome, repoPath))
 	hookBytes, err := ioutil.ReadFile(filepath.Join(repoPath, "hooks", "pre-receive"))
 	assert.NoErr(t, err)
