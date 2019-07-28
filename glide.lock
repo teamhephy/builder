@@ -1,8 +1,8 @@
-hash: d85b2efb6ab99d7c4d431a95b64116345596b1e371c19c2f55b2be73fff9bcbf
-updated: 2017-02-14T09:23:17.687476614-07:00
+hash: e0616e8faed836e438baa1989cfb350ea9c622f917109f45e5cc2455375fcc92
+updated: 2019-07-28T14:03:59.222872233-04:00
 imports:
-- name: github.com/adjust/goautoneg
-  version: d788f35a0315672bc90f50a6145d1252a230ee0d
+- name: bitbucket.org/ww/goautoneg
+  version: 75cd24fc2f2c2a2088577d12123ddee5f54e0675
 - name: github.com/arschles/assert
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
 - name: github.com/aws/aws-sdk-go
@@ -31,7 +31,6 @@ imports:
   - private/protocol/xml/xmlutil
   - private/signer/v4
   - private/waiter
-  - service/cloudfront/sign
   - service/ecr
   - service/s3
 - name: github.com/Azure/azure-sdk-for-go
