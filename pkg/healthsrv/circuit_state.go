@@ -3,7 +3,7 @@ package healthsrv
 import (
 	"fmt"
 
-	"github.com/deis/builder/pkg/sshd"
+	"github.com/teamhephy/builder/pkg/sshd"
 )
 
 // circuitState determines whether circ.State() == sshd.ClosedState, and sends the results back on

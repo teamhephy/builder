@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/deis/builder/pkg/sshd"
+	"github.com/teamhephy/builder/pkg/sshd"
 )
 
 const (

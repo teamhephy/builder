@@ -8,10 +8,10 @@ import (
 	"path/filepath"
 	"testing"
 
-	builderconf "github.com/deis/builder/pkg/conf"
+	builderconf "github.com/teamhephy/builder/pkg/conf"
 
 	"github.com/arschles/assert"
-	deis "github.com/deis/controller-sdk-go"
+	deis "github.com/teamhephy/controller-sdk-go"
 )
 
 func TestNew(t *testing.T) {

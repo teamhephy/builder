@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	deis "github.com/deis/controller-sdk-go"
+	deis "github.com/teamhephy/controller-sdk-go"
 	"k8s.io/kubernetes/pkg/api"
 )
 
