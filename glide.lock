@@ -1,8 +1,8 @@
 hash: 3b93f69bcdc11d8872492fa15eccb9be7419109d891009c190df141dcfa851ae
 updated: 2019-07-28T14:17:20.130894774-04:00
 imports:
-- name: bitbucket.org/ww/goautoneg
-  version: 75cd24fc2f2c2a2088577d12123ddee5f54e0675
+- name: github.com/adjust/goautoneg
+  version: d788f35a0315672bc90f50a6145d1252a230ee0d
   vcs: git
 - name: github.com/arschles/assert
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
@@ -71,12 +71,12 @@ imports:
   - hooks
   - pkg/time
 - name: github.com/teamhephy/pkg
-  version: 00e55bded444eea7fadff398f93152e962a0c338
+  version: 777f37a30108edaf6a2bd4e423cde34ec12870fd
   subpackages:
   - log
   - prettyprint
 - name: github.com/docker/distribution
-  version: 0afef00d5764404d70f86076f364551657d51de6
+  version: 5a101320cc27f191cef9b608f344a76d9f6b10f8
   repo: https://github.com/teamhephy/distribution
   vcs: git
   subpackages:
