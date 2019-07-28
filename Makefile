@@ -3,7 +3,7 @@ SHORT_NAME ?= builder
 include versioning.mk
 
 # dockerized development environment variables
-REPO_PATH := github.com/deis/${SHORT_NAME}
+REPO_PATH := github.com/teamhephy/${SHORT_NAME}
 DEV_ENV_IMAGE := quay.io/deis/go-dev:v0.22.0
 DEV_ENV_WORK_DIR := /go/src/${REPO_PATH}
 DEV_ENV_PREFIX := docker run --rm -v ${CURDIR}:${DEV_ENV_WORK_DIR} -w ${DEV_ENV_WORK_DIR}
