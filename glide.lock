@@ -183,7 +183,7 @@ imports:
   subpackages:
   - go
 - name: github.com/prometheus/common
-  version: ef7a9a5fb138aa5d3a19988537606226869a0390
+  version: 1f0ade24887d8d64b3e271ac7264d91fbe3f7654
   subpackages:
   - expfmt
   - model
