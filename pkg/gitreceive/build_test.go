@@ -11,14 +11,14 @@ import (
 	"testing"
 
 	"github.com/arschles/assert"
+	"github.com/docker/distribution/context"
+	"github.com/docker/distribution/registry/storage/driver/factory"
+	_ "github.com/docker/distribution/registry/storage/driver/inmemory"
 	builderconf "github.com/teamhephy/builder/pkg/conf"
 	"github.com/teamhephy/builder/pkg/storage"
 	"github.com/teamhephy/builder/pkg/sys"
 	"github.com/teamhephy/controller-sdk-go/api"
 	"github.com/teamhephy/pkg/log"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/storage/driver/factory"
-	_ "github.com/docker/distribution/registry/storage/driver/inmemory"
 	"gopkg.in/yaml.v2"
 )
 

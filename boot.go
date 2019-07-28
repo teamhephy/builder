@@ -6,6 +6,13 @@ import (
 	"runtime"
 
 	"github.com/codegangsta/cli"
+	storagedriver "github.com/docker/distribution/registry/storage/driver"
+	_ "github.com/docker/distribution/registry/storage/driver/azure"
+	"github.com/docker/distribution/registry/storage/driver/factory"
+	_ "github.com/docker/distribution/registry/storage/driver/gcs"
+	_ "github.com/docker/distribution/registry/storage/driver/s3-aws"
+	_ "github.com/docker/distribution/registry/storage/driver/swift"
+	"github.com/kelseyhightower/envconfig"
 	"github.com/teamhephy/builder/pkg"
 	"github.com/teamhephy/builder/pkg/cleaner"
 	"github.com/teamhephy/builder/pkg/conf"
@@ -14,13 +21,6 @@ import (
 	"github.com/teamhephy/builder/pkg/sshd"
 	"github.com/teamhephy/builder/pkg/sys"
 	pkglog "github.com/teamhephy/pkg/log"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
-	_ "github.com/docker/distribution/registry/storage/driver/azure"
-	"github.com/docker/distribution/registry/storage/driver/factory"
-	_ "github.com/docker/distribution/registry/storage/driver/gcs"
-	_ "github.com/docker/distribution/registry/storage/driver/s3-aws"
-	_ "github.com/docker/distribution/registry/storage/driver/swift"
-	"github.com/kelseyhightower/envconfig"
 	kcl "k8s.io/kubernetes/pkg/client/unversioned"
 )
 

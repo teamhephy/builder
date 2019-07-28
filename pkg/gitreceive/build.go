@@ -11,6 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/docker/distribution/context"
+	storagedriver "github.com/docker/distribution/registry/storage/driver"
 	"github.com/teamhephy/builder/pkg/controller"
 	"github.com/teamhephy/builder/pkg/git"
 	"github.com/teamhephy/builder/pkg/k8s"
@@ -19,8 +21,6 @@ import (
 	deisAPI "github.com/teamhephy/controller-sdk-go/api"
 	"github.com/teamhephy/controller-sdk-go/hooks"
 	"github.com/teamhephy/pkg/log"
-	"github.com/docker/distribution/context"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
 	"gopkg.in/yaml.v2"
 	"k8s.io/kubernetes/pkg/api"
 	client "k8s.io/kubernetes/pkg/client/unversioned"

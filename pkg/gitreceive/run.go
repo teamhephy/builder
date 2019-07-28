@@ -6,10 +6,10 @@ import (
 	"os"
 	"strings"
 
+	storagedriver "github.com/docker/distribution/registry/storage/driver"
 	builderconf "github.com/teamhephy/builder/pkg/conf"
 	"github.com/teamhephy/builder/pkg/sys"
 	"github.com/teamhephy/pkg/log"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
 
 	client "k8s.io/kubernetes/pkg/client/unversioned"
 )
