@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/deis/builder/pkg/controller"
-	"github.com/deis/builder/pkg/sshd"
+	"github.com/teamhephy/builder/pkg/controller"
+	"github.com/teamhephy/builder/pkg/sshd"
 )
 
 // Start starts the healthcheck server on :$port and blocks. It only returns if the server fails,

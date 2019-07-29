@@ -11,10 +11,10 @@ import (
 	"net"
 	"strings"
 
-	"github.com/deis/builder/pkg/controller"
-	"github.com/deis/builder/pkg/git"
-	"github.com/deis/controller-sdk-go/hooks"
-	"github.com/deis/pkg/log"
+	"github.com/teamhephy/builder/pkg/controller"
+	"github.com/teamhephy/builder/pkg/git"
+	"github.com/teamhephy/controller-sdk-go/hooks"
+	"github.com/teamhephy/pkg/log"
 	"golang.org/x/crypto/ssh"
 )
 

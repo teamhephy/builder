@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/arschles/assert"
-	"github.com/deis/builder/pkg/sys"
+	"github.com/teamhephy/builder/pkg/sys"
 )
 
 func TestGetStorageParams(t *testing.T) {
