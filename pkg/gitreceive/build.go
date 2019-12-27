@@ -110,6 +110,14 @@ func build(
 		}
 	}
 
+    var buildPackDebug string
+    if buildPackDebugInterface, ok := appConf.Values["DEIS_BUILDPACK_DEBUG"]; ok {
+        if bpDbgStr, ok := buildPackDebugInterface.(string); ok {
+            log.Debug("Buildpack Debug is on")
+            buildPackDebug = bpDbgStr
+        }
+    }
+
 	_, disableCaching := appConf.Values["DEIS_DISABLE_CACHE"]
 	slugBuilderInfo := NewSlugBuilderInfo(appName, gitSha.Short(), disableCaching)
 
@@ -227,6 +235,7 @@ func build(
 			cacheKey,
 			gitSha.Short(),
 			buildPackURL,
+			buildPackDebug,
 			conf.StorageType,
 			conf.SlugBuilderImage,
 			slugBuilderImagePullPolicy,
