@@ -1,6 +1,8 @@
 sudo: required
 dist: trusty
 language: go
+go:
+- 1.12.x
 services:
 - docker
 script: make bootstrap && make test
