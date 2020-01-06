@@ -298,7 +298,7 @@ func build(
 	for _, containerStatus := range buildPod.Status.ContainerStatuses {
 		state := containerStatus.State.Terminated
 		if state.ExitCode != 0 {
-			return fmt.Errorf("Build pod exited with code %d, stopping build.", state.ExitCode)
+			return fmt.Errorf("Build pod exited with code %d, stopping build", state.ExitCode)
 		}
 	}
 	log.Debug("Done")
