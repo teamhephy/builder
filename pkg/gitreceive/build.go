@@ -354,7 +354,7 @@ func prettyPrintJSON(data interface{}) (string, error) {
 	if err := json.Indent(formatted, output.Bytes(), "", "  "); err != nil {
 		return "", err
 	}
-	return string(formatted.Bytes()), nil
+	return formatted.String(), nil
 }
 
 func getProcFile(getter storage.ObjectGetter, dirName, procfileKey string, bType buildType) (deisAPI.ProcessType, error) {
