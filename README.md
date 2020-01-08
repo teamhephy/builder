@@ -1,7 +1,7 @@
 
 # Hephy Builder v2
 
-[![Build Status](https://ci.deis.io/job/builder/badge/icon)](https://ci.deis.io/job/builder) [![codecov](https://codecov.io/gh/deis/builder/branch/master/graph/badge.svg)](https://codecov.io/gh/deis/builder)
+[![Build Status](https://travis-ci.org/teamhephy/builder.svg?branch=master)](https://travis-ci.org/teamhephy/builder) [![codecov](https://codecov.io/gh/deis/builder/branch/master/graph/badge.svg)](https://codecov.io/gh/deis/builder)
 [![Go Report Card](https://goreportcard.com/badge/github.com/teamhephy/builder)](https://goreportcard.com/report/github.com/teamhephy/builder)[![codebeat badge](https://codebeat.co/badges/e29e5e2b-531d-4374-810b-f05053c47688)](https://codebeat.co/projects/github-com-deis-builder) [![Docker Repository on Quay](https://quay.io/repository/deisci/builder/status "Docker Repository on Quay")](https://quay.io/repository/deisci/builder)
 
 Hephy - A Fork of Deis Workflow

@@ -307,7 +307,7 @@ func build(
 	for _, containerStatus := range buildPod.Status.ContainerStatuses {
 		state := containerStatus.State.Terminated
 		if state.ExitCode != 0 {
-			return fmt.Errorf("Build pod exited with code %d, stopping build.", state.ExitCode)
+			return fmt.Errorf("Build pod exited with code %d, stopping build", state.ExitCode)
 		}
 	}
 	log.Debug("Done")
@@ -363,7 +363,7 @@ func prettyPrintJSON(data interface{}) (string, error) {
 	if err := json.Indent(formatted, output.Bytes(), "", "  "); err != nil {
 		return "", err
 	}
-	return string(formatted.Bytes()), nil
+	return formatted.String(), nil
 }
 
 func getProcFile(getter storage.ObjectGetter, dirName, procfileKey string, bType buildType) (deisAPI.ProcessType, error) {

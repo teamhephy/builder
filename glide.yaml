@@ -34,9 +34,11 @@ import:
   repo: https://github.com/belua/inf
   vcs: git
 - package: google.golang.org/api
-  version: fceeaa645c4015c833842e6ed6052b2dda667079
+  version: b8fc810ca6b55409cf098c3cde6de6e97a6f52b2
   repo: https://code.googlesource.com/google-api-go-client
   vcs: git
+- package: google.golang.org/grpc
+  version: d3ddb4469d5a1b949fc7a7da7c1d6a0d1b6de994
 - package: github.com/spf13/pflag
   version: 8e7dc108ab3a1ab6ce6d922bbaff5657b88e8e49
   repo: https://github.com/spf13/pflag
