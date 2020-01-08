@@ -166,9 +166,9 @@ func slugbuilderPod(
 		addEnvToPod(pod, "BUILDPACK_URL", buildpackURL)
 	}
 
-    if buildpackDebug != "" {
-        addEnvToPod(pod, "DEIS_BUILDPACK_DEBUG", buildpackDebug)
-    }
+	if buildpackDebug != "" {
+		addEnvToPod(pod, "DEIS_BUILDPACK_DEBUG", buildpackDebug)
+	}
 
 	return &pod
 }
