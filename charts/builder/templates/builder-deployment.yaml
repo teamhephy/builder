@@ -57,9 +57,12 @@ spec:
               value: "{{ .Values.global.registry_location }}"
             - name: "DEIS_REGISTRY_SECRET_PREFIX"
               value: "{{ .Values.global.secret_prefix }}"
-            # Set GIT_LOCK_TIMEOUT to number of minutes you want to wait to git push again to the same repository
             - name: "GIT_LOCK_TIMEOUT"
+{{- if (.Values.git_lock_timeout) }}
+              value: "{{ .Values.git_lock_timeout }}"
+{{- else }}
               value: "10"
+{{- end }}
             - name: "SLUGBUILDER_IMAGE_NAME"
               valueFrom:
                 configMapKeyRef:

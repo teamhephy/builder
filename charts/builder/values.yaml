@@ -4,6 +4,7 @@ docker_tag: canary
 # limits_cpu: "100m"
 # limits_memory: "50Mi"
 # builder_pod_node_selector: "disk:ssd"
+# git_lock_timeout: 10 # number of minutes you want to wait to git push again to the same repository (default 10)
 
 global:
   # Experimental feature to toggle using kubernetes ingress instead of the Deis router.
