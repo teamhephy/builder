@@ -2,6 +2,7 @@ package gitreceive
 
 import (
 	"bytes"
+	"context"
 	"errors"
 	"fmt"
 	"io/ioutil"
@@ -11,7 +12,6 @@ import (
 	"testing"
 
 	"github.com/arschles/assert"
-	"github.com/docker/distribution/context"
 	"github.com/docker/distribution/registry/storage/driver/factory"
 	_ "github.com/docker/distribution/registry/storage/driver/inmemory"
 	builderconf "github.com/teamhephy/builder/pkg/conf"

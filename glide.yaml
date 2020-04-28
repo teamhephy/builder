@@ -28,7 +28,7 @@ import:
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
 - package: github.com/docker/distribution
   repo: https://github.com/teamhephy/distribution
-  version: 0afef00d5764404d70f86076f364551657d51de6
+  version: c77f65b80cb8579cde5e2ba38fdeb92c08827698
   vcs: git
 - package: speter.net/go/exp/math/dec/inf
   repo: https://github.com/belua/inf
@@ -38,10 +38,22 @@ import:
   repo: https://code.googlesource.com/google-api-go-client
   vcs: git
 - package: google.golang.org/grpc
-  version: d3ddb4469d5a1b949fc7a7da7c1d6a0d1b6de994
+  version: 84671c5e11bfb5b7c237ff1799a660ff11a518d2
+- package: github.com/golang/protobuf
+  version: v1.4.0
+- package: github.com/prometheus/client_golang
+  version: v0.9.1
+- package: github.com/prometheus/common
+  version: v0.1.0
+- package: golang.org/x/net
+  version: 49e6db1c9ed2b2fdbc57fd579f0ca8f6082350be
+- package: golang.org/x/text/secure/bidirule
+  version: c4d099d611ac3ded35360abf03581e13d91c828f
 - package: github.com/spf13/pflag
   version: 8e7dc108ab3a1ab6ce6d922bbaff5657b88e8e49
   repo: https://github.com/spf13/pflag
   vcs: git
 - package: github.com/teamhephy/controller-sdk-go
   version: a1ffb4886a5f7f92fdd710b99e68c2555b74a703
+- package: github.com/aws/aws-sdk-go
+  version: v1.15.11
