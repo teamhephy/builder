@@ -45,6 +45,10 @@ import:
   version: v0.9.1
 - package: github.com/prometheus/common
   version: v0.1.0
+- package: golang.org/x/net
+  version: 49e6db1c9ed2b2fdbc57fd579f0ca8f6082350be
+- package: golang.org/x/text/secure/bidirule
+  version: c4d099d611ac3ded35360abf03581e13d91c828f
 - package: github.com/spf13/pflag
   version: 8e7dc108ab3a1ab6ce6d922bbaff5657b88e8e49
   repo: https://github.com/spf13/pflag

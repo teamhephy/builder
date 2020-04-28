@@ -1,5 +1,5 @@
-hash: fc58a2c82136fcb1d7e23e4d55708f53e858b8f2dc2705c5e577f85490a7960d
-updated: 2020-04-28T14:03:57.011701445-04:00
+hash: b7d65a91b7b469eec143ebc3c634b9ad48bfcf0afe8a55a8c1c51006683390b1
+updated: 2020-04-28T17:02:31.359259908-04:00
 imports:
 - name: github.com/arschles/assert
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
@@ -146,8 +146,6 @@ imports:
   - version
 - name: github.com/google/gofuzz
   version: bbcb9da2d746f8bdbd6a936686a0a6067ada0ec5
-- name: github.com/google/uuid
-  version: bd451584982ecf4ca5b1e5938cf168e17e30d837
 - name: github.com/googleapis/gax-go
   version: be11bb253a768098254dc71e95d1a81ced778de3
   subpackages:
@@ -256,13 +254,14 @@ imports:
   - ed25519/internal/edwards25519
   - ssh
 - name: golang.org/x/net
-  version: c2528b2dd8352441850638a8bb678c2ad056fd3e
+  version: 49e6db1c9ed2b2fdbc57fd579f0ca8f6082350be
   subpackages:
   - context
   - http2
   - http2/hpack
   - idna
   - internal/timeseries
+  - lex/httplex
   - trace
 - name: golang.org/x/oauth2
   version: b5adcc2dcdf009d0391547edc6ecbaff889f5bb9
@@ -276,9 +275,11 @@ imports:
   subpackages:
   - unix
 - name: golang.org/x/text
-  version: 6ca2caf96f159660c33dae334f64e31e5da91752
+  version: c4d099d611ac3ded35360abf03581e13d91c828f
   subpackages:
+  - secure/bidirule
   - transform
+  - unicode/bidi
   - unicode/norm
   - width
 - name: google.golang.org/api
