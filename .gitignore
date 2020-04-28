@@ -1,6 +1,6 @@
 rootfs/bin/boot
-vendor/
 rootfs/usr/bin/
+vendor/
 ./builder
 coverage.txt
 testdata/hooks/pre-receive
