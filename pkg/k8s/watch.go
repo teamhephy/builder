@@ -26,7 +26,7 @@ type PodWatcher struct {
 func NewPodWatcher(c *client.Client, ns string) *PodWatcher {
 	pw := &PodWatcher{}
 
-	pw.Store.Store, pw.Controller = framework.NewIndexerInformer(
+	pw.Store.Indexer, pw.Controller = framework.NewIndexerInformer(
 		&cache.ListWatch{
 			ListFunc:  podListFunc(c, ns),
 			WatchFunc: podWatchFunc(c, ns),
