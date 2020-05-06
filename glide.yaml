@@ -23,7 +23,9 @@ import:
 - package: github.com/codegangsta/cli
   version: a65b733b303f0055f8d324d805f393cd3e7a7904
 - package: k8s.io/kubernetes
-  version: 1.2.4
+  version: v1.4.12
+- package: k8s.io/client-go
+  version: release-1.4
 - package: github.com/arschles/assert
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
 - package: github.com/docker/distribution

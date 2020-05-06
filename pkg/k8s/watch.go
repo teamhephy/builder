@@ -6,7 +6,6 @@ import (
 	"k8s.io/kubernetes/pkg/api"
 	"k8s.io/kubernetes/pkg/client/cache"
 	client "k8s.io/kubernetes/pkg/client/unversioned"
-	"k8s.io/kubernetes/pkg/controller/framework"
 	"k8s.io/kubernetes/pkg/labels"
 	"k8s.io/kubernetes/pkg/runtime"
 	"k8s.io/kubernetes/pkg/watch"
@@ -19,21 +18,21 @@ var (
 //PodWatcher is a struct which holds the return values of (k8s.io/kubernetes/pkg/controller/framework).NewIndexerInformer together.
 type PodWatcher struct {
 	Store      cache.StoreToPodLister
-	Controller *framework.Controller
+	Controller *cache.Controller
 }
 
 //NewPodWatcher creates a new BuildPodWatcher useful to list the pods using a cache which gets updated based on the watch func.
 func NewPodWatcher(c *client.Client, ns string) *PodWatcher {
 	pw := &PodWatcher{}
 
-	pw.Store.Store, pw.Controller = framework.NewIndexerInformer(
+	pw.Store.Indexer, pw.Controller = cache.NewIndexerInformer(
 		&cache.ListWatch{
 			ListFunc:  podListFunc(c, ns),
 			WatchFunc: podWatchFunc(c, ns),
 		},
 		&api.Pod{},
 		resyncPeriod,
-		framework.ResourceEventHandlerFuncs{},
+		cache.ResourceEventHandlerFuncs{},
 		cache.Indexers{},
 	)
 
