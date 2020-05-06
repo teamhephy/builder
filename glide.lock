@@ -1,6 +1,11 @@
-hash: bfc6ad15f08b4cea455ad942497dac93404abff6b5dada28a119e1aade39bab4
-updated: 2020-05-01T17:39:19.947287056-04:00
+hash: b1d230440256afb57475ecd672288899e5b8dcecb4c9575d40256e0703dbda84
+updated: 2020-05-06T18:04:01.524752848-04:00
 imports:
+- name: cloud.google.com/go
+  version: 3b1ae45394a234c385be014e9a488f2bb6eef821
+  subpackages:
+  - compute/metadata
+  - internal
 - name: github.com/arschles/assert
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
 - name: github.com/aws/aws-sdk-go
@@ -70,7 +75,7 @@ imports:
   - unit
   - util
 - name: github.com/coreos/pkg
-  version: 7f080b6c11ac2d2347c3cd7521e810207ea1a041
+  version: fa29b1d70f0beaddd4c7021607cc3c3be8ce94b8
   subpackages:
   - capnslog
   - dlopen
@@ -103,10 +108,8 @@ imports:
   - version
 - name: github.com/docker/go-metrics
   version: b619b3592b65de4f087d9f16863a7e6ff905973c
-- name: github.com/docker/go-units
-  version: 0bbddae09c5a5419a8c6dcdd7ff90da3d450393b
 - name: github.com/emicklei/go-restful
-  version: c4afa8e5421428d584b32d36d7b35f2c9ae5f823
+  version: 89ef8af493ab468a45a42bb0d89a06fccdd2fb22
   subpackages:
   - log
   - swagger
@@ -115,9 +118,10 @@ imports:
 - name: github.com/go-ini/ini
   version: 2e44421e256d82ebbf3d4d4fcabe8930b905eff3
 - name: github.com/gogo/protobuf
-  version: 82d16f734d6d871204a3feb1a73cb220cc92574c
+  version: e18d7aa8f8c624c915db340349aad4c49b10d173
   subpackages:
   - gogoproto
+  - plugin/compare
   - plugin/defaultcheck
   - plugin/description
   - plugin/embedcheck
@@ -125,7 +129,6 @@ imports:
   - plugin/equal
   - plugin/face
   - plugin/gostring
-  - plugin/grpc
   - plugin/marshalto
   - plugin/oneofcheck
   - plugin/populate
@@ -137,6 +140,7 @@ imports:
   - proto
   - protoc-gen-gogo/descriptor
   - protoc-gen-gogo/generator
+  - protoc-gen-gogo/grpc
   - protoc-gen-gogo/plugin
   - sortkeys
   - vanity
@@ -152,10 +156,11 @@ imports:
   - ptypes/duration
   - ptypes/timestamp
 - name: github.com/google/cadvisor
-  version: e47efa0e8af65e9a2a2eb2ce955e156eac067852
+  version: a726d13de8cb32860e73d72a78dc8e0124267709
   subpackages:
   - api
   - cache/memory
+  - client/v2
   - collector
   - container
   - container/common
@@ -213,7 +218,7 @@ imports:
 - name: github.com/jmespath/go-jmespath
   version: 3433f3ea46d9f8019119e7dd41274e112a2359a9
 - name: github.com/jonboulle/clockwork
-  version: 3f831b65b61282ba6bece21b91beea2edc4c887a
+  version: 72f9bd7c4e0c2a40055ab3d0f09654f730cce982
 - name: github.com/juju/ratelimit
   version: 77ed1c8a01217656d2080ad51981f6e99adaa177
 - name: github.com/kelseyhightower/envconfig
@@ -230,25 +235,6 @@ imports:
   version: 10cc4abfa7125aeaa6de57dd9ea6805c5b37285b
 - name: github.com/opencontainers/go-digest
   version: 4b560741809dd10de7b455081e356258c70270d0
-- name: github.com/opencontainers/runc
-  version: baf6536d6259209c3edfa2b22237af82942d3dfa
-  subpackages:
-  - libcontainer
-  - libcontainer/apparmor
-  - libcontainer/cgroups
-  - libcontainer/cgroups/fs
-  - libcontainer/cgroups/systemd
-  - libcontainer/configs
-  - libcontainer/configs/validate
-  - libcontainer/criurpc
-  - libcontainer/keys
-  - libcontainer/label
-  - libcontainer/seccomp
-  - libcontainer/selinux
-  - libcontainer/stacktrace
-  - libcontainer/system
-  - libcontainer/user
-  - libcontainer/utils
 - name: github.com/pborman/uuid
   version: ca53cad383cad2479bbba7f7a1a05797ec1386e4
 - name: github.com/prometheus/client_golang
@@ -268,15 +254,13 @@ imports:
   - internal/bitbucket.org/ww/goautoneg
   - model
 - name: github.com/prometheus/procfs
-  version: 490cc6eb5fa45bf8a8b7b73c8bc82a8160e8531d
+  version: 454a56f35412459b5e684fd5ec0f9211b94f002a
 - name: github.com/PuerkitoBio/purell
   version: 8a290539e2e8629dbc4e6bad948158f790ec31f4
 - name: github.com/PuerkitoBio/urlesc
   version: 5bd2802263f21d8788851d5305584c82a5c75d7e
-- name: github.com/Sirupsen/logrus
-  version: 51fe59aca108dc5680109e7b2051cbdcfa5a253c
 - name: github.com/sirupsen/logrus
-  version: e8e563a8238de839b9cbbc1d9807d140a5a24a8d
+  version: 60c74ad9be0d874af0ab0daef6ab07c5c5911f0d
 - name: github.com/spf13/pflag
   version: 8e7dc108ab3a1ab6ce6d922bbaff5657b88e8e49
   repo: https://github.com/spf13/pflag
@@ -294,7 +278,7 @@ imports:
   - prettyprint
   - time
 - name: github.com/ugorji/go
-  version: f4485b318aadd133842532f841dc205a8e339d74
+  version: f1f1a805ed361a0e078bb537e4ea78cd37dcf065
   subpackages:
   - codec
   - codec/codecgen
@@ -335,14 +319,14 @@ imports:
   - lex/httplex
   - trace
 - name: golang.org/x/oauth2
-  version: b5adcc2dcdf009d0391547edc6ecbaff889f5bb9
+  version: 3c3a985cb79f52a3190fbc056984415ca6763d01
   subpackages:
   - google
   - internal
   - jws
   - jwt
 - name: golang.org/x/sys
-  version: 833a04a10549a95dc34458c195cbad61bbb6cb4d
+  version: 9c60d1c508f5134d1ca726b4641db998f2523357
   subpackages:
   - unix
 - name: golang.org/x/text
@@ -388,7 +372,6 @@ imports:
 - name: google.golang.org/cloud
   version: eb47ba841d53d93506cfbfbc03927daf9cc48f88
   subpackages:
-  - compute/metadata
   - internal
   - internal/opts
   - internal/transport
@@ -416,7 +399,7 @@ imports:
   - tap
   - transport
 - name: google.golang.org/protobuf
-  version: 4d5be764fb4e29cb616c984fb923b75b8d1031c6
+  version: 1f5b6fe64530cac2061a3d315b7e44966b1a200b
   subpackages:
   - encoding/prototext
   - encoding/protowire
@@ -452,8 +435,76 @@ imports:
   version: 3887ee99ecf07df5b447e9b00d9c0b2adaa9f3e4
 - name: gopkg.in/yaml.v2
   version: eca94c41d994ae2215d455ce578ae6e2dc6ee516
+- name: k8s.io/client-go
+  version: e5fcd1eb6215fb420fbfc95d7e2b3b672ab5d8e8
+  subpackages:
+  - 1.4/pkg/api
+  - 1.4/pkg/api/endpoints
+  - 1.4/pkg/api/errors
+  - 1.4/pkg/api/meta
+  - 1.4/pkg/api/meta/metatypes
+  - 1.4/pkg/api/pod
+  - 1.4/pkg/api/resource
+  - 1.4/pkg/api/service
+  - 1.4/pkg/api/unversioned
+  - 1.4/pkg/api/unversioned/validation
+  - 1.4/pkg/api/util
+  - 1.4/pkg/api/v1
+  - 1.4/pkg/api/validation
+  - 1.4/pkg/apimachinery
+  - 1.4/pkg/apimachinery/registered
+  - 1.4/pkg/apis/autoscaling
+  - 1.4/pkg/apis/batch
+  - 1.4/pkg/apis/extensions
+  - 1.4/pkg/auth/user
+  - 1.4/pkg/capabilities
+  - 1.4/pkg/conversion
+  - 1.4/pkg/conversion/queryparams
+  - 1.4/pkg/fields
+  - 1.4/pkg/labels
+  - 1.4/pkg/runtime
+  - 1.4/pkg/runtime/serializer
+  - 1.4/pkg/runtime/serializer/json
+  - 1.4/pkg/runtime/serializer/protobuf
+  - 1.4/pkg/runtime/serializer/recognizer
+  - 1.4/pkg/runtime/serializer/streaming
+  - 1.4/pkg/runtime/serializer/versioning
+  - 1.4/pkg/security/apparmor
+  - 1.4/pkg/selection
+  - 1.4/pkg/third_party/forked/golang/reflect
+  - 1.4/pkg/types
+  - 1.4/pkg/util
+  - 1.4/pkg/util/clock
+  - 1.4/pkg/util/config
+  - 1.4/pkg/util/crypto
+  - 1.4/pkg/util/errors
+  - 1.4/pkg/util/flowcontrol
+  - 1.4/pkg/util/framer
+  - 1.4/pkg/util/hash
+  - 1.4/pkg/util/integer
+  - 1.4/pkg/util/intstr
+  - 1.4/pkg/util/json
+  - 1.4/pkg/util/labels
+  - 1.4/pkg/util/net
+  - 1.4/pkg/util/net/sets
+  - 1.4/pkg/util/parsers
+  - 1.4/pkg/util/rand
+  - 1.4/pkg/util/runtime
+  - 1.4/pkg/util/sets
+  - 1.4/pkg/util/uuid
+  - 1.4/pkg/util/validation
+  - 1.4/pkg/util/validation/field
+  - 1.4/pkg/util/wait
+  - 1.4/pkg/util/yaml
+  - 1.4/pkg/version
+  - 1.4/pkg/watch
+  - 1.4/pkg/watch/versioned
+  - 1.4/rest
+  - 1.4/tools/clientcmd/api
+  - 1.4/tools/metrics
+  - 1.4/transport
 - name: k8s.io/kubernetes
-  version: 9fab05fe59fb4e02deb0f839ae2ae79954bbda4c
+  version: 19e81afecf5eb2b7838c35e2cbf776aff04dc34c
   subpackages:
   - pkg/api
   - pkg/api/endpoints
@@ -474,9 +525,9 @@ imports:
   - pkg/apis/apps
   - pkg/apis/apps/install
   - pkg/apis/apps/v1alpha1
-  - pkg/apis/authentication.k8s.io
-  - pkg/apis/authentication.k8s.io/install
-  - pkg/apis/authentication.k8s.io/v1beta1
+  - pkg/apis/authentication
+  - pkg/apis/authentication/install
+  - pkg/apis/authentication/v1beta1
   - pkg/apis/authorization
   - pkg/apis/authorization/install
   - pkg/apis/authorization/v1beta1
@@ -502,6 +553,9 @@ imports:
   - pkg/apis/rbac
   - pkg/apis/rbac/install
   - pkg/apis/rbac/v1alpha1
+  - pkg/apis/storage
+  - pkg/apis/storage/install
+  - pkg/apis/storage/v1beta1
   - pkg/auth/user
   - pkg/capabilities
   - pkg/client/cache
@@ -511,7 +565,6 @@ imports:
   - pkg/client/typed/discovery
   - pkg/client/unversioned
   - pkg/client/unversioned/clientcmd/api
-  - pkg/controller/framework
   - pkg/conversion
   - pkg/conversion/queryparams
   - pkg/fields
@@ -526,6 +579,8 @@ imports:
   - pkg/runtime/serializer/recognizer
   - pkg/runtime/serializer/streaming
   - pkg/runtime/serializer/versioning
+  - pkg/security/apparmor
+  - pkg/selection
   - pkg/types
   - pkg/util
   - pkg/util/clock
@@ -545,6 +600,7 @@ imports:
   - pkg/util/rand
   - pkg/util/runtime
   - pkg/util/sets
+  - pkg/util/uuid
   - pkg/util/validation
   - pkg/util/validation/field
   - pkg/util/wait
