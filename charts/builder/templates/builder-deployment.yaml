@@ -24,7 +24,7 @@ spec:
       serviceAccount: deis-builder
       containers:
         - name: deis-builder
-          image: quay.io/{{.Values.org}}/builder:{{.Values.docker_tag}}
+          image: {{.Values.org}}/builder:{{.Values.docker_tag}}
           imagePullPolicy: {{.Values.pull_policy}}
           ports:
             - containerPort: 2223
