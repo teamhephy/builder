@@ -11,6 +11,6 @@ spec:
       targetPort: 2223
   selector:
     app: deis-builder
-{{ if .Values.global.experimental_native_ingress }}
+{{ if .Values.global.use_native_ingress }}
   type: "LoadBalancer"
 {{ end }}
