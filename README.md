@@ -1,14 +1,14 @@
 
 # Hephy Builder v2
 
-[![Build Status](https://travis-ci.org/teamhephy/builder.svg?branch=master)](https://travis-ci.org/teamhephy/builder) [![codecov](https://codecov.io/gh/deis/builder/branch/master/graph/badge.svg)](https://codecov.io/gh/deis/builder)
-[![Go Report Card](https://goreportcard.com/badge/github.com/teamhephy/builder)](https://goreportcard.com/report/github.com/teamhephy/builder)[![codebeat badge](https://codebeat.co/badges/e29e5e2b-531d-4374-810b-f05053c47688)](https://codebeat.co/projects/github-com-deis-builder) [![Docker Repository on Quay](https://quay.io/repository/deisci/builder/status "Docker Repository on Quay")](https://quay.io/repository/deisci/builder)
+[![Build Status](https://travis-ci.org/teamhephy/builder.svg?branch=master)](https://travis-ci.org/teamhephy/builder) [![codecov](https://codecov.io/gh/teamhephy/builder/branch/master/graph/badge.svg)](https://codecov.io/gh/teamhephy/builder)
+[![Go Report Card](https://goreportcard.com/badge/github.com/teamhephy/builder)](https://goreportcard.com/report/github.com/teamhephy/builder)[![codebeat badge](https://codebeat.co/badges/e29e5e2b-531d-4374-810b-f05053c47688)](https://codebeat.co/projects/github-com-teamhephy-builder) [![Docker Repository](https://hub.docker.com/r/hephy/builder "Docker Repository on Quay")](https://hub.docker.com/r/hephy/builder)
 
 Hephy - A Fork of Deis Workflow
 
-Deis (pronounced DAY-iss) Workflow is an open source Platform as a Service (PaaS) that adds a developer-friendly layer to any [Kubernetes][k8s-home] cluster, making it easy to deploy and manage applications on your own servers.
+Hephy (pronounced HEF-ee) Workflow is an open source Platform as a Service (PaaS) that adds a developer-friendly layer to any [Kubernetes][k8s-home] cluster, making it easy to deploy and manage applications on your own servers.
 
-For more information about Deis Workflow, please visit the main project page at https://github.com/teamhephy/workflow.
+For more information about Hephy Workflow, please visit the main project page at https://github.com/teamhephy/workflow.
 
 We welcome your input! If you have feedback, please [submit an issue][issues]. If you'd like to participate in development, please read the "Development" section below and [submit a pull request][prs].
 
@@ -35,17 +35,17 @@ Builder currently supports the following off-cluster storage backends:
 
 # Development
 
-The Deis project welcomes contributions from all developers. The high level process for development matches many other open source projects. See below for an outline.
+The Hephy project welcomes contributions from all developers. The high level process for development matches many other open source projects. See below for an outline.
 
 * Fork this repository
 * Make your changes
 * [Submit a pull request][prs] (PR) to this repository with your changes, and unit tests whenever possible
 	* If your PR fixes any [issues][issues], make sure you write `Fixes #1234` in your PR description (where `#1234` is the number of the issue you're closing)
-* The Deis core contributors will review your code. After each of them sign off on your code, they'll label your PR with `LGTM1` and `LGTM2` (respectively). Once that happens, a contributor will merge it
+* The Hephy core contributors will review your code. After each of them sign off on your code, they'll label your PR with `LGTM1` and `LGTM2` (respectively). Once that happens, a contributor will merge it
 
 ## Docker Based Development Environment
 
-The preferred environment for development uses [the `go-dev` Docker image](https://github.com/teamhephy/docker-go-dev). The tools described in this section are used to build, test, package and release each version of Deis.
+The preferred environment for development uses [the `go-dev` Docker image](https://github.com/teamhephy/docker-go-dev). The tools described in this section are used to build, test, package and release each version of Hephy.
 
 To use it yourself, you must have [make](https://www.gnu.org/software/make/) installed and Docker installed and running on your local development machine.
 
@@ -63,9 +63,9 @@ Note that you will not be able to build or push Docker images using this method 
 
 # Testing
 
-The Deis project requires that as much code as possible is unit tested, but the core contributors also recognize that some code must be tested at a higher level (functional or integration tests, for example).
+The Hephy project requires that as much code as possible is unit tested, but the core contributors also recognize that some code must be tested at a higher level (functional or integration tests, for example).
 
-The [end-to-end tests](https://github.com/teamhephy/workflow-e2e) repository has our integration tests. Additionally, the core contributors and members of the community also regularly [dogfood](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) the platform. Since this particular component is at the center of much of the Deis Workflow platform, we find it especially important to dogfood it.
+The [end-to-end tests](https://github.com/teamhephy/workflow-e2e) repository has our integration tests. Additionally, the core contributors and members of the community also regularly [dogfood](https://en.wikipedia.org/wiki/Eating_your_own_dog_food) the platform. Since this particular component is at the center of much of the Hephy Workflow platform, we find it especially important to dogfood it.
 
 ## Running End-to-End Tests
 

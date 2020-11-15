@@ -17,7 +17,7 @@ LDFLAGS := "-s -w -X main.version=${VERSION}"
 # Docker Root FS
 BINDIR := ./rootfs
 
-DEIS_REGISTRY ?= ${DEV_REGISTRY}/
+HEPHY_REGISTRY ?= ${DEV_REGISTRY}/
 
 GOTEST := go test --race
 

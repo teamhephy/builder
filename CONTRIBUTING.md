@@ -1,4 +1,4 @@
-# Contributing to Deis
+# Contributing to Hephy
 
-This project is part of Deis. You can find the latest contribution
-guidelines [in our documentation](https://deis.com/docs/workflow/contributing/overview/).
+This project is part of Hephy. You can find the latest contribution
+guidelines [in our documentation](https://docs.teamhephy.com/contributing/overview/).

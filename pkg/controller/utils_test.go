@@ -11,7 +11,7 @@ import (
 	builderconf "github.com/teamhephy/builder/pkg/conf"
 
 	"github.com/arschles/assert"
-	deis "github.com/teamhephy/controller-sdk-go"
+	hephy "github.com/teamhephy/controller-sdk-go"
 )
 
 func TestNew(t *testing.T) {
@@ -54,8 +54,8 @@ func TestNewWithInvalidBuilderKeyPath(t *testing.T) {
 }
 
 func TestCheckAPICompat(t *testing.T) {
-	client := &deis.Client{ControllerAPIVersion: deis.APIVersion}
-	err := deis.ErrAPIMismatch
+	client := &hephy.Client{ControllerAPIVersion: hephy.APIVersion}
+	err := hephy.ErrAPIMismatch
 
 	if apiErr := CheckAPICompat(client, err); apiErr != nil {
 		t.Errorf("api errors are non-fatal and should return nil, got '%v'", apiErr)

@@ -332,12 +332,7 @@ func createAppEnvConfigSecret(secretsClient client.SecretsInterface, secretName 
 	if _, err := secretsClient.Create(newSecret); err != nil {
 		if apierrors.IsAlreadyExists(err) {
 			_, err = secretsClient.Update(newSecret)
-			// I simplified according to linter, err is either "err" or nil
-			// So no need for an if-statement here, as before with the redundant if
-			// statement, it was either returning err or nil just the same...
 			return err
-			// KPB: I actually don't agree with this simplification, but I don't know
-			// how to make the linter ignore it yet...
 		}
 		return err
 	}

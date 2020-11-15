@@ -21,7 +21,7 @@ var BuilderKeyLocation = "/var/run/secrets/api/auth/builder-key"
 // Parameters is map which contains storage params
 type Parameters map[string]interface{}
 
-// GetBuilderKey returns the key to be used as token to interact with deis-controller
+// GetBuilderKey returns the key to be used as token to interact with hephy-controller
 func GetBuilderKey() (string, error) {
 	builderKeyBytes, err := ioutil.ReadFile(BuilderKeyLocation)
 	if err != nil {

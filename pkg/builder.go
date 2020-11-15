@@ -1,7 +1,7 @@
-// Package pkg provides common libraries for the Deis builder.
+// Package pkg provides common libraries for the Hephy builder.
 //
-// The Deis builder is responsible for building slugs and docker images for use in the Deis
-// on the Deis PaaS platform.
+// The Hephy builder is responsible for building slugs and docker images for use in the Hephy
+// on the Hephy PaaS platform.
 package pkg
 
 import (

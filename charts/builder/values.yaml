@@ -7,11 +7,11 @@ docker_tag: canary
 # git_lock_timeout: 10 # number of minutes you want to wait to git push again to the same repository (default 10)
 
 global:
-  # Experimental feature to toggle using kubernetes ingress instead of the Deis router.
+  # Experimental feature to toggle using kubernetes ingress instead of the Hephy router.
   #
   # Valid values are:
-  # - true: The deis controller will now create Kubernetes ingress rules for each app, and ingress rules will automatically be created for the controller itself.
-  # - false: The default mode, and the default behavior of Deis workflow.
+  # - true: The hephy controller will now create Kubernetes ingress rules for each app, and ingress rules will automatically be created for the controller itself.
+  # - false: The default mode, and the default behavior of Hephy workflow.
   experimental_native_ingress: false
   # Role-Based Access Control for Kubernetes >= 1.5
   use_rbac: false
