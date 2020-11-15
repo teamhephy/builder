@@ -150,12 +150,7 @@ func build(
 		return fmt.Errorf("running %s (%s)", strings.Join(tarCmd.Args, " "), err)
 	}
 
-	var bType buildType
-	if buildPackURL != "" {
-		bType = buildTypeProcfile
-	} else {
-		bType = getBuildTypeForDir(tmpDir)
-	}
+	bType := getBuildType(tmpDir, appConf)
 	usingDockerfile := bType == buildTypeDockerfile
 
 	appTgzdata, err := ioutil.ReadFile(absAppTgz)
