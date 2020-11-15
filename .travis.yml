@@ -6,6 +6,7 @@ services:
 script:
 - make bootstrap
 - make test
+- make test-cover
 notifications:
   slack:
     rooms:
