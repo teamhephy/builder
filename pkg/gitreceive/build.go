@@ -18,7 +18,7 @@ import (
 	"github.com/teamhephy/builder/pkg/k8s"
 	"github.com/teamhephy/builder/pkg/storage"
 	"github.com/teamhephy/builder/pkg/sys"
-	deisAPI "github.com/teamhephy/controller-sdk-go/api"
+	hephyAPI "github.com/teamhephy/controller-sdk-go/api"
 	"github.com/teamhephy/controller-sdk-go/hooks"
 	"github.com/teamhephy/pkg/log"
 	"gopkg.in/yaml.v2"
@@ -150,12 +150,7 @@ func build(
 		return fmt.Errorf("running %s (%s)", strings.Join(tarCmd.Args, " "), err)
 	}
 
-	var bType buildType
-	if buildPackURL != "" {
-		bType = buildTypeProcfile
-	} else {
-		bType = getBuildTypeForDir(tmpDir)
-	}
+	bType := getBuildType(tmpDir, appConf)
 	usingDockerfile := bType == buildTypeDockerfile
 
 	appTgzdata, err := ioutil.ReadFile(absAppTgz)
@@ -366,8 +361,8 @@ func prettyPrintJSON(data interface{}) (string, error) {
 	return formatted.String(), nil
 }
 
-func getProcFile(getter storage.ObjectGetter, dirName, procfileKey string, bType buildType) (deisAPI.ProcessType, error) {
-	procType := deisAPI.ProcessType{}
+func getProcFile(getter storage.ObjectGetter, dirName, procfileKey string, bType buildType) (hephyAPI.ProcessType, error) {
+	procType := hephyAPI.ProcessType{}
 	if _, err := os.Stat(fmt.Sprintf("%s/Procfile", dirName)); err == nil {
 		rawProcFile, err := ioutil.ReadFile(fmt.Sprintf("%s/Procfile", dirName))
 		if err != nil {

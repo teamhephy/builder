@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"time"
 
-	deis "github.com/teamhephy/controller-sdk-go"
+	hephy "github.com/teamhephy/controller-sdk-go"
 	"k8s.io/kubernetes/pkg/api"
 )
 
-func readinessHandler(client *deis.Client, nsLister NamespaceLister) http.Handler {
+func readinessHandler(client *hephy.Client, nsLister NamespaceLister) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		stopCh := make(chan struct{})
 

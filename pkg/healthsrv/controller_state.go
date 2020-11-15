@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/teamhephy/builder/pkg/controller"
-	deis "github.com/teamhephy/controller-sdk-go"
+	hephy "github.com/teamhephy/controller-sdk-go"
 )
 
 // GetClient is an (*net/http).Client compatible interface that provides just the Get cross-section of functionality.
@@ -13,7 +13,7 @@ type GetClient interface {
 	Get(string) (*http.Response, error)
 }
 
-func controllerState(client *deis.Client, succCh chan<- string, errCh chan<- error, stopCh <-chan struct{}) {
+func controllerState(client *hephy.Client, succCh chan<- string, errCh chan<- error, stopCh <-chan struct{}) {
 	err := client.Healthcheck()
 	if controller.CheckAPICompat(client, err) != nil {
 		select {
