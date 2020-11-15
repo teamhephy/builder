@@ -40,7 +40,7 @@ test-style:
 	${DEV_ENV_CMD} lint
 
 test-unit:
-	${DEV_ENV_CMD} sh -c '${GOTEST} $$(glide nv)'
+	${DEV_ENV_CMD} sh -c 'go test --race ./...'
 
 test-cover:
 	${DEV_ENV_CMD} test-cover.sh
