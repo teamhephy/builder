@@ -21,6 +21,10 @@ spec:
       labels:
         app: deis-builder
     spec:
+{{- with .Values.global.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+{{- end }}
       serviceAccount: deis-builder
       containers:
         - name: deis-builder
