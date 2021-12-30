@@ -43,6 +43,7 @@ func clientConfig() *ssh.ClientConfig {
 		Auth: []ssh.AuthMethod{
 			ssh.Password("password"),
 		},
+		HostKeyCallback: ssh.InsecureIgnoreHostKey(),
 	}
 }
 
