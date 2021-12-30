@@ -30,10 +30,9 @@ import:
   version: 6882f85ccdc7c1822b146d1a6b0c2c48f91b5140
 - package: github.com/docker/distribution
   repo: https://github.com/teamhephy/distribution
-  version: c77f65b80cb8579cde5e2ba38fdeb92c08827698
   vcs: git
-- package: speter.net/go/exp/math/dec/inf
-  repo: https://github.com/belua/inf
+- package: gopkg.in/inf.v0
+  repo: https://github.com/go-inf/inf
   vcs: git
 - package: google.golang.org/api
   version: b8fc810ca6b55409cf098c3cde6de6e97a6f52b2
@@ -42,7 +41,6 @@ import:
 - package: google.golang.org/grpc
   version: 84671c5e11bfb5b7c237ff1799a660ff11a518d2
 - package: github.com/golang/protobuf
-  version: v1.4.0
 - package: github.com/prometheus/client_golang
   version: v0.9.1
 - package: github.com/prometheus/common
