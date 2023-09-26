@@ -1,6 +1,6 @@
 name: builder
 home: https://github.com/teamhephy/builder
-version: <Will be populated by the ci before publishing the chart>
+version: 2.13.9
 description: Git server and application builder for Deis Workflow.
 maintainers:
 - email: team@teamhephy.com

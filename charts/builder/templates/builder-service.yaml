@@ -4,8 +4,8 @@ metadata:
   name: deis-builder
   labels:
     heritage: deis
-annotations:
-{{- if .Values.global.experimental_native_ingress }}
+  annotations:
+{{- if .Values.global.use_native_ingress }}
     external-dns.alpha.kubernetes.io/hostname: deis-builder.{{ .Values.platform_domain }}
 {{- end }}
 spec:

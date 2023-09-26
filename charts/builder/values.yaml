@@ -1,6 +1,6 @@
 org: "hephy"
 pull_policy: "Always"
-docker_tag: canary
+docker_tag: v2.13.7
 # limits_cpu: "100m"
 # limits_memory: "50Mi"
 # builder_pod_node_selector: "disk:ssd"
